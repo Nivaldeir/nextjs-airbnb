@@ -1,0 +1,19 @@
+"use client";
+
+interface HeadingProps {
+  title: String;
+  subtitle?: String;
+  center?: boolean;
+}
+const Heading: React.FC<HeadingProps> = ({ title, subtitle, center }) => {
+  return (
+    <>
+      <div className={center ? "text-center" : "text-start"}>
+        <div className="text-2xl font-bold">{title}</div>
+        <div className="font-ligth text-neutral-500 mt2">{subtitle}</div>
+      </div>
+    </>
+  );
+};
+
+export default Heading;
